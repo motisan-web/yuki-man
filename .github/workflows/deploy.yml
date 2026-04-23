@@ -13,5 +13,13 @@ jobs:
           server: ${{ secrets.STAGING_SERVER }}
           username: ${{ secrets.STAGING_USERNAME }}
           password: ${{ secrets.STAGING_PASSWORD }}
-          server-dir: ./
+          server-dir: /
           local-dir: ./
+          dangerous-clean-slate: false
+          exclude: |
+            **/.git*
+            **/.git*/**
+            .github/**
+            .claude-codex/**
+            CLAUDE.md
+            .ftpignore
