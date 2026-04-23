@@ -1,4 +1,5 @@
 Options -Indexes
+DirectoryIndex index.php index.html
 
 # Protect data and articles directories (Apache 2.4)
 <FilesMatch "\.(json|md)$">
