@@ -1,0 +1,14 @@
+Options -Indexes
+php_flag display_errors Off
+
+# Protect data and articles directories
+<FilesMatch "\.(json|md)$">
+  Order Allow,Deny
+  Deny from all
+</FilesMatch>
+
+# Allow access to PHP files and assets
+<Files ~ "\.(php|css|js|jpg|jpeg|png|gif|webp|ico)$">
+  Order Allow,Deny
+  Allow from all
+</Files>
